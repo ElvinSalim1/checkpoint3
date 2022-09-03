@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="form">
+      <input type="text" id="name" name="name" placeholder="Name" />
+      <input type="text" id="age" name="age" placeholder="Age" />
+
+      <button>Submit</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+      
+      const form = document.querySelector('.form')
+      const resultArea = document.querySelector('#result')
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault()
+
+        const formData = new FormData(event.target)
+        const data = {}
+
+        formData.forEach((value, key) => {
+          data[key] = value
+        })
+
+        const element = document.createElement('p')
+        element.innerHTML = `Name: ${data.name}<br>Age: ${data.age}`
+
+        resultArea.appendChild(element)
+      })
+    </script>
+  </body>
+</html>

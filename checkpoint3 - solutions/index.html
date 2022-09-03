@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkpoint 4</title>
+    <script src="./index.js" defer></script>
+    <style>
+      .resultArea > * + * {
+        margin-top: 16px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8px;
+        border: 2px dashed #000;
+      }
+      .container > * {
+        margin: 0;
+      }
+      .container > * + * {
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="form">
+      <input type="text" name="search" />
+
+      <select name="type">
+        <option value="title">Title</option>
+        <option value="author">Author</option>
+      </select>
+
+      <button>Search</button>
+    </form>
+
+    <div class="resultArea"></div>
+  </body>
+</html>

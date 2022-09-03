@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #aBox {
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="aBox">I am a box</div>
+
+    <button id="greenBtn">I make the box green</button>
+    <button id="redBtn">I make the box red</button>
+    <button id="meanBtn">I change the text in the box to "I am a stupid box"</button>
+
+    <script>
+      const box = document.querySelector('#aBox')
+
+      const greenBtn = document.getElementById('greenBtn')
+      const redBtn = document.getElementById('redBtn')
+      const meanBtn = document.getElementById('meanBtn')
+
+
+      function changeBox(color, element) {
+        return function (event) {
+          element.style.backgroundColor = color
+        }
+      }
+
+      greenBtn.addEventListener('click', changeBox('green', box))
+      redBtn.addEventListener('click', changeBox('red', box))
+      meanBtn.addEventListener('click', function (event) {
+        box.innerHTML = 'I am a stupid box'
+      })
+
+      // greenBtn.addEventListener('click', function (event) {
+      //   box.style.backgroundColor = 'green'
+      // })
+
+      // redBtn.addEventListener('click', function (event) {
+      //   box.style.backgroundColor = 'red'
+      // })
+
+      // meanBtn.addEventListener('click', function (event) {
+      //   box.innerHTML = 'I am a stupid box'
+      // })
+    </script>
+  </body>
+</html>

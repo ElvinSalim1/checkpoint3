@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main></main>
+    <script>
+     
+      const main = document.querySelector('main')
+
+      const div = document.createElement('div')
+      const h1 = document.createElement('h1')
+      const p = document.createElement('p')
+      const a = document.createElement('a')
+
+      div.setAttribute('id', 'container')
+      h1.innerText = 'Welcome!'
+      p.innerHTML = 'This is a sample page. Welcome all mariocarters'
+      a.setAttribute('href', 'http://elg.no')
+      a.innerHTML = 'This is a random link'
+
+      div.appendChild(h1)
+      div.appendChild(p)
+      div.appendChild(a)
+
+      main.appendChild(div)
+    </script>
+  </body>
+</html>
